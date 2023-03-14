@@ -1,6 +1,4 @@
 #pragma once
-#ifdef SET_H
-#define SET_H
 
 class Set {
 
@@ -14,6 +12,8 @@ public:
     Set();
     Set(Set const& other);
     Set& operator= (Set const& other);
+    Set(Set&& other);
+    Set& operator= (Set&& other);
     ~Set();
 
     bool addElement(int const element);
@@ -23,4 +23,3 @@ public:
     void setIntersection(Set const& other);
 };
 
-#endif
